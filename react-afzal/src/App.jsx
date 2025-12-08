@@ -1,10 +1,11 @@
 import NetflixSeries from "./components/NetflixSeries";
-import { Fragment } from "react";
+import "./components/Netflix.css";
 
 export const App = () => {
   return (
-    <Fragment>
+    <section className="container">
+      <h1 className="card-heading">List of Best Netflix Series</h1>
       <NetflixSeries />
-    </Fragment>
+    </section>
   );
 };

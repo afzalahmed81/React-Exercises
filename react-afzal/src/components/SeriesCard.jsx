@@ -1,20 +1,31 @@
+import "./Netflix.css";
+
 export const SeriesCard = ({ data }) => {
   console.log(data);
   const { id, img_url, name, rating, description, cast, genre, watch_url } =
     data;
+  const btn_style = {
+    padding: "1.2rem 2.4rem",
+    border: "none",
+    fontSize: "1.6rem",
+    backgroundColor: "var(--bnt-hover-bg-color)",
+    color: "var(--bg-color)",
+  };
   return (
-    <li>
+    <li className="card">
       <div>
         <img alt={name} src={img_url} width="30%" height="30%" />
       </div>
-      <h2>Name: {name}</h2>
-      <h3>Rating: {rating} </h3>
-      <p>Summary:{description}</p>
-      <p>Genre: {genre}</p>
-      <p>Cast: {cast}</p>
-      <a href={watch_url} target="_blank">
-        <button>Watch Now</button>
-      </a>
+      <div className="card-content">
+        <h2>Name: {name}</h2>
+        <h3 style={{ margin: "1.2rem 0" }}>Rating: {rating} </h3>
+        <p style={{ margin: "1.2rem 0" }}>Summary:{description}</p>
+        <p style={{ margin: "1.2rem 0" }}>Genre: {genre.join(", ")}</p>
+        <p style={{ margin: "1.2rem 0" }}>Cast: {cast.join(", ")}</p>
+        <a href={watch_url} target="_blank">
+          <button style={btn_style}>Watch Now</button>
+        </a>
+      </div>
     </li>
   );
 };
