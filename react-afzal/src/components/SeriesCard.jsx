@@ -8,7 +8,7 @@ export const SeriesCard = ({ data }) => {
     padding: "1.2rem 2.4rem",
     border: "none",
     fontSize: "1.6rem",
-    backgroundColor: `${rating >= 8.5 ? "#7dca0" : "#f7dc6f"}`,
+    backgroundColor: `${rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
     color: "var(--bg-color)",
     fontWeight: "bold",
     cursor: "pointer",
